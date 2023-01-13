@@ -10,7 +10,7 @@ pipeline {
                 bat 'rmdir C:\\node-api /s /q'
                 bat 'mkdir C:\\node-api'
                 bat 'echo installing dependencies'
-                bat 'npm ci'
+                bat 'npm i'
             }
         }
 
