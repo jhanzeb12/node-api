@@ -19,6 +19,7 @@ pipeline {
                 bat 'xcopy . C:\\node-api /e /i /h /y'
                 dir('/node-api') {
                     bat 'npm ci'
+                    bat 'npm i'
                 }
             }
         }
