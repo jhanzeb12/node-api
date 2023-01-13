@@ -11,7 +11,7 @@ pipeline {
                 bat 'mkdir C:\\node-api'
                 bat 'echo installing dependencies'
                 bat 'npm --production=false install'
-                bat 'ls'
+                bat 'dir'
             }
         }
 
