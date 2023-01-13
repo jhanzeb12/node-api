@@ -6,12 +6,14 @@ pipeline {
     stages{
         stage('Build') {
             steps {
-                step('Cleaning Old Files') {
+                step {
+                    bat 'echo Cleaning old files...'
                     bat 'C:'
                     bat 'cd node-api'
                     bat 'rm -rf ./*'
                 }
-                step('Installing Dependencies') {
+                step {
+                    bat 'echo installing dependencies'
                     bat 'npm ci'
                 }
             }
