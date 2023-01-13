@@ -17,7 +17,7 @@ pipeline {
             steps {
                 bat 'xcopy . C:\\node-api /e /i /h /y'
                 dir('/node-api') {
-                    bat 'npm i -f'
+                    bat 'NODE_ENV=development npm install -f'
                 }
             }
         }
