@@ -16,7 +16,7 @@ pipeline {
 
         stage('Deploy - Dev') {
             steps {
-                bat 'copy /Y *.* C:/node-api'
+                bat 'copy /Y *.* C:\\node-api'
             }
         }
     }
