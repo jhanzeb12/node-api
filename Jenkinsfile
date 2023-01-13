@@ -10,6 +10,7 @@ pipeline {
                 bat 'rmdir C:\\node-api /s /q'
                 bat 'mkdir C:\\node-api'
                 bat 'echo installing dependencies'
+                bat 'npm --production=false install'
             }
         }
 
@@ -17,7 +18,7 @@ pipeline {
             steps {
                 bat 'xcopy . C:\\node-api /e /i /h /y'
                 dir('/node-api') {
-                    bat 'NODE_ENV=development npm install -f'
+                    bat 'npm install -f'
                 }
             }
         }
