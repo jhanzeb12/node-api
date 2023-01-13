@@ -17,7 +17,9 @@ pipeline {
         stage('Deploy - Dev') {
             steps {
                 bat 'xcopy . C:\\node-api /e /i /h /y'
-                bat 'cd c:\\node-api && npm ci'
+                dir('/node-api') {
+                    bat 'npm ci'
+                }
             }
         }
     }
