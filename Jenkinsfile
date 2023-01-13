@@ -6,7 +6,20 @@ pipeline {
     stages{
         stage('Build') {
             steps {
-                bat 'npm i'
+                step('Cleaning Old Files') {
+                    bat 'C:'
+                    bat 'cd node-api'
+                    bat 'rm -rf ./*'
+                }
+                step('Installing Dependencies') {
+                    bat 'npm ci'
+                }
+            }
+        }
+
+        stage('Deploy - Dev') {
+            steps {
+                bat 'copy /Y *.* C:\\node-api'
             }
         }
     }
