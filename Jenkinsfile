@@ -7,8 +7,8 @@ pipeline {
         stage('Build') {
             steps {
                 bat 'echo Cleaning old files...'
-                bat 'rmdir C:/node-api'
-                bat 'mkdir C:/node-api'
+                bat 'rmdir C:\\node-api'
+                bat 'mkdir C:\\node-api'
                 bat 'echo installing dependencies'
                 bat 'npm ci'
             }
