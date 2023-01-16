@@ -18,9 +18,6 @@ pipeline {
         stage('Deploy - Dev') {
             steps {
                 bat 'xcopy . C:\\node-api /e /i /h /y'
-                dir('/node-api') {
-                    bat 'npm --production=false install -f'
-                }
             }
         }
     }
